@@ -24,13 +24,95 @@
         <a href="#home">Home</a>
         <a href="#about">Tentang Kami</a>
         <a href="#menu">Menu</a>
+        <a href="#menu-bundling">Menu Bundling</a>
         <a href="#contact">Kontak</a>
       </div>
       <div class="navbar-extra">
-        <a href="#" id="search"><i data-feather="search"></i></a>
-        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart-button"
+          ><i data-feather="shopping-cart"></i
+        ></a>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
+
+      <!-- Search Form Start -->
+
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="Cari disini..." />
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+      <!-- Search Form End -->
+
+      <!-- Shopping Cart Start -->
+      <div class="shopping-cart">
+        <div class="cart-item">
+          <img
+            src="img/bundling-image/paket-hemat-duo.webp"
+            alt="Paket Hemat Duo"
+          />
+          <div class="bundling-details">
+            <h3>Paket Hemat Duo</h3>
+            <div class="item-price">Rp 57.000,-</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="cart-item">
+          <img
+            src="img/bundling-image/paket-bakar-madu.webp"
+            alt="Paket Bakar Madu"
+          />
+          <div class="bundling-details">
+            <h3>Paket Bakar Madu</h3>
+            <div class="item-price">Rp 76.000,-</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="cart-item">
+          <img
+            src="img/bundling-image/paket-pepes-nusantara.webp"
+            alt="Paket Pepes Nusantara"
+          />
+          <div class="bundling-details">
+            <h3>Paket Pepes Nusantara</h3>
+            <div class="item-price">Rp 69.000,-</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="cart-item">
+          <img
+            src="img/bundling-image/paket-sop-ikan-hangat.webp"
+            alt="Paket Sop Ikan Hangat"
+          />
+          <div class="bundling-details">
+            <h3>Paket Sop Ikan Hangat</h3>
+            <div class="item-price">Rp 66.000,-</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="cart-item">
+          <img
+            src="img/bundling-image/paket-goreng-sharing.webp"
+            alt="Paket Goreng Sharing"
+          />
+          <div class="bundling-details">
+            <h3>Paket Goreng Sharing</h3>
+            <div class="item-price">Rp 128.000,-</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="cart-item">
+          <img
+            src="img/bundling-image/paket-premium-kepiting.webp"
+            alt="Paket Premium Kepiting"
+          />
+          <div class="bundling-details">
+            <h3>Paket Premium Kepiting</h3>
+            <div class="item-price">Rp 166.000,-</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+      </div>
+      <!-- Shopping Cart End -->
     </nav>
     <!-- Navbar end -->
 
@@ -53,18 +135,32 @@
       <h2><span>Tentang</span> Kami</h2>
       <div class="row">
         <div class="about-img">
-          <img src="../img/tentang-kami.jpg" alt="Tentang Kami" />
+          <img src="../img/tentang-kami.png" alt="Tentang Kami" />
         </div>
         <div class="content">
           <h3>Kenapa harus resto laut lestari?</h3>
           <p>
-            Resto Laut Lestari hadir di tepi pantai dengan suasana estetik,
-            nyaman, dan pemandangan laut yang memukau.
+            Resto Laut Lestari adalah tempat menikmati hidangan laut dalam
+            suasana hangat dengan pemandangan pantai yang memukau. Setiap
+            kunjungan menjadi kesempatan untuk berkumpul, berbagi cerita, dan
+            menikmati suasana pesisir bersama orang-orang terdekat. Restoran
+            kami nyaman untuk makan siang santai, makan malam keluarga, maupun
+            pertemuan bersama teman. Dekorasi bernuansa laut dan area terbuka
+            menghadirkan suasana pantai tanpa mengurangi kenyamanan. Dengan
+            pelayanan ramah, kami berusaha memberikan pengalaman menyenangkan
+            sejak tamu datang hingga selesai bersantap. Kami percaya keramahan
+            dan suasana yang baik membuat hidangan semakin istimewa.
           </p>
           <p>
-            Setiap hidangan menggunakan bahan baku laut segar yang dibeli
-            langsung dari nelayan dan tambak setempat, sehingga kualitas dan
-            cita rasanya selalu terjaga.
+            Kami memilih bahan laut segar dari nelayan dan tambak setempat,
+            sekaligus mendukung pemasok lokal. Bahan pilihan diolah dengan
+            cermat dan bumbu autentik menjadi hidangan untuk berbagai selera,
+            mulai dari udang bakar madu dan ikan bakar hingga olahan cumi,
+            kerang, serta kepiting. Setiap hidangan disiapkan dengan perhatian
+            pada rasa, kematangan, dan penyajian. Kami menjaga kualitas serta
+            terbuka terhadap masukan pengunjung. Dengan mengutamakan kesegaran,
+            pelayanan tulus, dan potensi lokal, Resto Laut Lestari ingin menjadi
+            pilihan untuk menikmati hidangan laut dan kebersamaan.
           </p>
         </div>
       </div>
@@ -76,104 +172,374 @@
 
     <section id="menu" class="menu">
       <h2><span>Menu</span> Kami</h2>
+      <h3 class="title-type">Menu Makanan</h3>
       <p>
         Nikmati hidangan laut segar, diracik dengan beragam bumbu untuk kuliner
         lezat dan pengalaman yang berkesan.
       </p>
       <div class="row">
-        <div class="menu-card">
+        <div class="menu-card seafood">
           <img
             src="img/menu/udang-bakar-madu.jpg"
             alt="Udang Bakar Madu"
             class="menu-card-image"
           />
-          <h3 class="menu-card-title">Udang Bakar Madu</h3>
+          <h3 class="menu-card-title food">Udang Bakar Madu</h3>
           <p class="menu-card-class">Rp 40.000,-</p>
         </div>
-        <div class="menu-card">
+        <div class="menu-card seafood">
           <img
             src="img/menu/cakalang-bakar.jpg"
             alt="Cakalang Bakar"
             class="menu-card-image"
           />
-          <h3 class="menu-card-title">Cakalang Bakar</h3>
+          <h3 class="menu-card-title food">Cakalang Bakar</h3>
           <p class="menu-card-class">Rp 55.000,-</p>
         </div>
-        <div class="menu-card">
+        <div class="menu-card seafood">
           <img
             src="img/menu/cumi-goreng-tepung.jpg"
             alt="Cumi Goreng Tepung"
             class="menu-card-image"
           />
-          <h3 class="menu-card-title">Cumi Goreng Tepung</h3>
+          <h3 class="menu-card-title food">Cumi Goreng Tepung</h3>
           <p class="menu-card-class">Rp 30.000,-</p>
         </div>
-        <div class="menu-card">
+        <div class="menu-card seafood">
           <img
             src="img/menu/kepiting-asam-manis.jpg"
             alt="Kepiting Asam Manis"
             class="menu-card-image"
           />
-          <h3 class="menu-card-title">Kepiting Asam Manis</h3>
+          <h3 class="menu-card-title food">Kepiting Asam Manis</h3>
           <p class="menu-card-class">Rp 70.000,-</p>
         </div>
-        <div class="menu-card">
+        <div class="menu-card seafood">
           <img
             src="img/menu/kerang-asam-manis.jpg"
             alt="Kerang Saus Padang"
             class="menu-card-image"
           />
-          <h3 class="menu-card-title">Kerang Saus Padang</h3>
+          <h3 class="menu-card-title food">Kerang Saus Padang</h3>
           <p class="menu-card-class">Rp 32.000,-</p>
         </div>
-        <div class="menu-card">
+        <div class="menu-card seafood">
           <img
             src="img/menu/cumi-hitam.jpg"
             alt="Cumi Hitam"
             class="menu-card-image"
           />
-          <h3 class="menu-card-title">Cumi Hitam</h3>
+          <h3 class="menu-card-title food">Cumi Hitam</h3>
           <p class="menu-card-class">Rp 35.000,-</p>
         </div>
-        <div class="menu-card">
+        <div class="menu-card seafood">
           <img
             src="img/menu/gurame-asam-manis.jpg"
             alt="Gurame Asam Manis"
             class="menu-card-image"
           />
-          <h3 class="menu-card-title">Gurame Asam Manis</h3>
+          <h3 class="menu-card-title food">Gurame Asam Manis</h3>
           <p class="menu-card-class">Rp 45.000,-</p>
         </div>
-        <div class="menu-card">
+        <div class="menu-card seafood">
           <img
             src="img/menu/pepes-ikan.jpeg"
             alt="Pepes Ikan"
             class="menu-card-image"
           />
-          <h3 class="menu-card-title">Pepes Ikan</h3>
+          <h3 class="menu-card-title food">Pepes Ikan</h3>
           <p class="menu-card-class">Rp 32.000,-</p>
         </div>
-        <div class="menu-card">
+        <div class="menu-card seafood">
           <img
             src="img/menu/pindang-ikan.jpg"
             alt="Sop Ikan Kuah Kuning"
             class="menu-card-image"
           />
-          <h3 class="menu-card-title">Sop Ikan Kuah Kuning</h3>
+          <h3 class="menu-card-title food">Sop Ikan Kuah Kuning</h3>
           <p class="menu-card-class">Rp 42.000,-</p>
         </div>
-        <div class="menu-card">
+        <div class="menu-card seafood">
           <img
             src="img/menu/udang-goreng-mentega.jpg"
             alt="Udang Goreng Mentega"
             class="menu-card-image"
           />
-          <h3 class="menu-card-title">Udang Goreng Mentega</h3>
+          <h3 class="menu-card-title food">Udang Goreng Mentega</h3>
           <p class="menu-card-class">Rp 40.000,-</p>
+        </div>
+      </div>
+      <h3 class="title-type">Menu Karbo & Sambal</h3>
+      <p>
+        Lengkapi hidangan laut dengan pilihan karbohidrat seperti nasi putih dan
+        kentang goreng, serta aneka sambal pelengkap.
+      </p>
+      <div class="row">
+        <div class="menu-card">
+          <img
+            src="img/menu/nasi-putih.jpg"
+            alt="Nasi Putih"
+            class="menu-card-image"
+          />
+          <h3 class="menu-card-title">Nasi Putih</h3>
+          <p class="menu-card-class">Rp 8.000,-</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="img/menu/kentang-goreng.jpg"
+            alt="Kentang Goreng"
+            class="menu-card-image"
+          />
+          <h3 class="menu-card-title">Kentang Goreng</h3>
+          <p class="menu-card-class">Rp 15.000,-</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="img/menu/sambal-kecap.jpg"
+            alt="Sambal Kecap"
+            class="menu-card-image"
+          />
+          <h3 class="menu-card-title">Sambal Kecap</h3>
+          <p class="menu-card-class">Rp 5.000,-</p>
+        </div>
+        <div class="menu-card wrapper-sambal-dabu">
+          <img
+            src="img/menu/Sambal-Dabu-Dabu.jpg"
+            alt="Sambal Dabu-dabu"
+            class="menu-card-image"
+          />
+          <h3 class="menu-card-title Sambal-Dabu-Dabu">Sambal Dabu-dabu</h3>
+          <p class="menu-card-class">Rp 11.000,-</p>
+        </div>
+      </div>
+      <h3 class="title-type">Menu Minuman</h3>
+      <p>
+        Nikmati minuman segar, mulai dari air mineral hingga es jeruk, sebagai
+        pelengkap hidangan laut yang lezat.
+      </p>
+      <div class="row">
+        <div class="menu-card">
+          <img
+            src="img/menu/air-mineral.jpg"
+            alt="Air Mineral"
+            class="menu-card-image"
+          />
+          <h3 class="menu-card-title">Air Mineral</h3>
+          <p class="menu-card-class">Rp 5.000,-</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="img/menu/es-jeruk.jpg"
+            alt="Es Jeruk"
+            class="menu-card-image"
+          />
+          <h3 class="menu-card-title">Es Jeruk</h3>
+          <p class="menu-card-class">Rp 9.000,-</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="img/menu/es-kelapa-muda.jpg"
+            alt="Es Kelapa Muda"
+            class="menu-card-image"
+          />
+          <h3 class="menu-card-title">Es Kelapa Muda</h3>
+          <p class="menu-card-class">Rp 12.000,-</p>
+        </div>
+        <div class="menu-card">
+          <img src="img/menu/es-teh.jpg" alt="Es Teh" class="menu-card-image" />
+          <h3 class="menu-card-title">Es Teh</h3>
+          <p class="menu-card-class">Rp 6.000,-</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="img/menu/teh-hangat.jpg"
+            alt="Teh Hangat"
+            class="menu-card-image"
+          />
+          <h3 class="menu-card-title">Teh Hangat</h3>
+          <p class="menu-card-class">Rp 5.000,-</p>
         </div>
       </div>
     </section>
     <!-- Menu Section end -->
+
+    <!-- Menu-bundling Section start -->
+    <section class="menu-bundling" id="menu-bundling">
+      <h2>Menu <span>Bundling</span></h2>
+      <p class="discount"><span>10%</span> OFF!</p>
+      <p>
+        Nikmati paket bundling hidangan laut favorit, porsi pas untuk berbagi,
+        harga lebih hemat dengan pemesanan paket bundling.
+      </p>
+      <div class="row">
+        <div class="bundling-card">
+          <div class="bundling-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#" class="item-detail-button1"><i data-feather="eye"></i></a>
+          </div>
+          <div class="bundling-image">
+            <img
+              src="img/bundling-image/paket-hemat-duo.webp"
+              alt="Paket Hemat Duo"
+            />
+          </div>
+          <div class="bundling-content">
+            <h3>Paket Hemat Duo</h3>
+            <div class="bundling-stars">
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+            </div>
+            <div class="bundling-price">
+              Rp 57.000,- <span>Rp 63.000,-</span>
+            </div>
+          </div>
+        </div>
+        <div class="bundling-card">
+          <div class="bundling-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#"><i data-feather="eye" class="item-detail-button2"></i></a>
+          </div>
+          <div class="bundling-image">
+            <img
+              src="img/bundling-image/paket-bakar-madu.webp"
+              alt="Paket Bakar Madu"
+            />
+          </div>
+          <div class="bundling-content">
+            <h3>Paket Bakar Madu</h3>
+            <div class="bundling-stars">
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <span class="star-part star-8">
+                <i data-feather="star" class="starempty"></i>
+                <i data-feather="star" class="starpartial"></i>
+              </span>
+            </div>
+            <div class="bundling-price">
+              Rp 76.000,- <span>Rp 85.000,-</span>
+            </div>
+          </div>
+        </div>
+        <div class="bundling-card">
+          <div class="bundling-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#"><i data-feather="eye" class="item-detail-button3"></i></a>
+          </div>
+          <div class="bundling-image">
+            <img
+              src="img/bundling-image/paket-pepes-nusantara.webp"
+              alt="Paket Pepes Nusantara"
+            />
+          </div>
+          <div class="bundling-content">
+            <h3>Paket Pepes Nusantara</h3>
+            <div class="bundling-stars">
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <span class="star-part star-5">
+                <i data-feather="star" class="starempty"></i>
+                <i data-feather="star" class="starpartial"></i>
+              </span>
+            </div>
+            <div class="bundling-price">
+              Rp 69.000,- <span>Rp 77.000,-</span>
+            </div>
+          </div>
+        </div>
+        <div class="bundling-card">
+          <div class="bundling-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#"><i data-feather="eye" class="item-detail-button4"></i></a>
+          </div>
+          <div class="bundling-image">
+            <img
+              src="img/bundling-image/paket-sop-ikan-hangat.webp"
+              alt="Paket Sop Ikan Hangat"
+            />
+          </div>
+          <div class="bundling-content">
+            <h3>Paket Sop Ikan Hangat</h3>
+            <div class="bundling-stars">
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <span class="star-part star-6">
+                <i data-feather="star" class="starempty"></i>
+                <i data-feather="star" class="starpartial"></i>
+              </span>
+            </div>
+            <div class="bundling-price">
+              Rp 66.000,- <span>Rp 73.000,-</span>
+            </div>
+          </div>
+        </div>
+        <div class="bundling-card">
+          <div class="bundling-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#"><i data-feather="eye" class="item-detail-button5"></i></a>
+          </div>
+          <div class="bundling-image">
+            <img
+              src="img/bundling-image/paket-goreng-sharing.webp"
+              alt="Paket Goreng Sharing"
+            />
+          </div>
+          <div class="bundling-content">
+            <h3>Paket Goreng Sharing</h3>
+            <div class="bundling-stars">
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <span class="star-part star-4">
+                <i data-feather="star" class="starempty"></i>
+                <i data-feather="star" class="starpartial"></i>
+              </span>
+            </div>
+            <div class="bundling-price">
+              Rp 128.000,- <span>Rp 142.000,-</span>
+            </div>
+          </div>
+        </div>
+        <div class="bundling-card">
+          <div class="bundling-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#"><i data-feather="eye" class="item-detail-button6"></i></a>
+          </div>
+          <div class="bundling-image">
+            <img
+              src="img/bundling-image/paket-premium-kepiting.webp"
+              alt="Paket Premium Kepiting"
+            />
+          </div>
+          <div class="bundling-content">
+            <h3>Paket Premium Kepiting</h3>
+            <div class="bundling-stars">
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <span class="star-part star-7">
+                <i data-feather="star" class="starempty"></i>
+                <i data-feather="star" class="starpartial"></i>
+              </span>
+            </div>
+            <div class="bundling-price">
+              Rp 166.000,- <span>Rp 184.000,-</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Menu-bundling Section end -->
 
     <!-- Contact Section start -->
     <section id="contact" class="contact">
@@ -210,9 +576,7 @@
     <footer>
       <div class="socials">
         <a href="#"><i data-feather="instagram"></i></a>
-        <a href="#"
-          ><img src="img/x-logo-white.png" alt="x"
-        /></a>
+        <a href="#"><img src="img/x-logo-white.png" alt="x" /></a>
         <a href="#"><i data-feather="facebook"></i></a>
       </div>
       <div class="links">
@@ -226,6 +590,195 @@
       </div>
     </footer>
     <!-- Footer end -->
+
+    <!-- Modal Box Item Detail start -->
+    <div class="modal" id="item-detail-modal1">
+      <div class="modal-container">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img
+            src="img/bundling-image/paket-hemat-duo.webp"
+            alt="Paket Hemat Duo"
+          />
+          <div class="bundling-content">
+            <h3>Paket Hemat Duo</h3>
+            <p>Paket Hemat Duo cocok untuk menikmati sajian laut bersama pasangan atau sahabat. Porsinya pas untuk makan siang santai, makan malam, maupun akhir pekan. Perpaduan rasa gurih dan harga bundling yang hemat menjadikannya pilihan praktis. Sajikan selagi hangat untuk melengkapi momen makan berdua yang sederhana, nyaman, dan berkesan.</p>
+            <div class="bundling-stars">
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <span class="star-part star-9">
+                <i data-feather="star" class="starempty"></i>
+                <i data-feather="star" class="starpartial"></i>
+              </span>
+            </div>
+            <div class="bundling-price">
+              Rp 57.000,- <span>Rp 63.000,-</span>
+            </div>
+            <a href="#"
+              ><i data-feather="shopping-cart"></i> <span>add to cart</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="item-detail-modal2">
+      <div class="modal-container">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img
+            src="img/bundling-image/paket-bakar-madu.webp"
+            alt="Paket Bakar Madu"
+          />
+          <div class="bundling-content">
+            <h3>Paket Bakar Madu</h3>
+            <p>Paket Bakar Madu menghadirkan sajian laut dengan perpaduan rasa manis gurih serta aroma bakaran menggoda. Nikmati bersama nasi hangat untuk santapan yang lebih memuaskan. Cocok disajikan saat berkumpul dengan keluarga atau teman, maupun untuk merayakan momen spesial. Pilihan bundling ini praktis bagi pencinta hidangan bakar yang lezat.</p>
+            <div class="bundling-stars">
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <span class="star-part star-8">
+                <i data-feather="star" class="starempty"></i>
+                <i data-feather="star" class="starpartial"></i>
+              </span>
+            </div>
+            <div class="bundling-price">
+              Rp 76.000,- <span>Rp 85.000,-</span>
+            </div>
+            <a href="#"
+              ><i data-feather="shopping-cart"></i> <span>add to cart</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="item-detail-modal3">
+      <div class="modal-container">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img
+            src="img/bundling-image/paket-pepes-nusantara.webp"
+            alt="Paket Pepes Nusantara"
+          />
+          <div class="bundling-content">
+            <h3>Paket Pepes Nusantara</h3>
+            <p>Paket Pepes Nusantara mengangkat cita rasa rempah khas masakan tradisional Indonesia. Pepes beraroma harum ini menghadirkan suasana rumahan yang hangat di meja makan. Nikmati bersama nasi hangat saat makan siang atau malam. Paket bundling ini cocok untuk berbagi hidangan bersama keluarga dan sahabat dalam suasana santai dan akrab.</p>
+            <div class="bundling-stars">
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <span class="star-part star-5">
+                <i data-feather="star" class="starempty"></i>
+                <i data-feather="star" class="starpartial"></i>
+              </span>
+            </div>
+            <div class="bundling-price">
+              Rp 69.000,- <span>Rp 77.000,-</span>
+            </div>
+            <a href="#"
+              ><i data-feather="shopping-cart"></i> <span>add to cart</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="item-detail-modal4">
+      <div class="modal-container">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img
+            src="img/bundling-image/paket-sop-ikan-hangat.webp"
+            alt="Paket Sop Ikan Hangat"
+          />
+          <div class="bundling-content">
+            <h3>Paket Sop Ikan Hangat</h3>
+            <p>Paket Sop Ikan Hangat menawarkan sajian berkuah dengan aroma lembut dan rasa gurih menyegarkan. Nikmati ikan dan kuahnya selagi hangat untuk santapan yang nyaman, terutama saat berkumpul bersama keluarga. Praktis untuk makan siang atau malam, paket ini melengkapi meja makan dengan hidangan sederhana yang terasa akrab dan menenangkan.</p>
+            <div class="bundling-stars">
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <span class="star-part star-6">
+                <i data-feather="star" class="starempty"></i>
+                <i data-feather="star" class="starpartial"></i>
+              </span>
+            </div>
+            <div class="bundling-price">
+              Rp 66.000,- <span>Rp 73.000,-</span>
+            </div>
+            <a href="#"
+              ><i data-feather="shopping-cart"></i> <span>add to cart</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="item-detail-modal5">
+      <div class="modal-container">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img
+            src="img/bundling-image/paket-goreng-sharing.webp"
+            alt="Paket Goreng Sharing"
+          />
+          <div class="bundling-content">
+            <h3>Paket Goreng Sharing</h3>
+            <p>Paket Goreng Sharing menghadirkan sajian laut goreng dengan tekstur renyah dan rasa gurih yang menggugah selera. Porsinya cocok untuk berbagi, sehingga semua dapat mencicipi hidangan sambil bertukar cerita. Pas untuk makan bersama keluarga atau teman, terutama saat akhir pekan. Nikmati selagi hangat agar kerenyahannya tetap terasa.</p>
+            <div class="bundling-stars">
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <span class="star-part star-4">
+                <i data-feather="star" class="starempty"></i>
+                <i data-feather="star" class="starpartial"></i>
+              </span>
+            </div>
+            <div class="bundling-price">
+              Rp 128.000,- <span>Rp 142.000,-</span>
+            </div>
+            <a href="#"
+              ><i data-feather="shopping-cart"></i> <span>add to cart</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="item-detail-modal6">
+      <div class="modal-container">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img
+            src="img/bundling-image/paket-premium-kepiting.webp"
+            alt="Paket Premium Kepiting"
+          />
+          <div class="bundling-content">
+            <h3>Paket Premium Kepiting</h3>
+            <p>Paket Premium Kepiting menjadikan kepiting sebagai sajian utama untuk pengalaman bersantap istimewa. Cocok bagi pencinta hidangan laut yang ingin merayakan momen spesial bersama keluarga, pasangan, atau sahabat. Sajikan di tengah meja agar semua dapat berbagi. Paket ini pas untuk jamuan akhir pekan atau perayaan kecil, serta nikmat disantap bersama hidangan pendamping favorit.</p>
+            <div class="bundling-stars">
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <i data-feather="star" class="starfull"></i>
+              <span class="star-part star-7">
+                <i data-feather="star" class="starempty"></i>
+                <i data-feather="star" class="starpartial"></i>
+              </span>
+            </div>
+            <div class="bundling-price">
+              Rp 166.000,- <span>Rp 184.000,-</span>
+            </div>
+            <a href="#"
+              ><i data-feather="shopping-cart"></i> <span>add to cart</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Box Item Detail end -->
 
     <!-- Feather Icons -->
     <script>
