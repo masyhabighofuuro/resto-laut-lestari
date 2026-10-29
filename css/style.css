@@ -214,6 +214,7 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+  -webkit-mask-image: linear-gradient(var(--opposite-bg-color) 80%, color-mix(in srgb, var(--bg-color) 0%, transparent));
   mask-image: linear-gradient(var(--opposite-bg-color) 80%, color-mix(in srgb, var(--bg-color) 0%, transparent));
 }
 
@@ -299,6 +300,10 @@ body {
 
 .about .row .about-img img {
   width: 95%;
+  -webkit-mask-image: url(../img/menu/noun_blob_163427_@700.png);
+  -webkit-mask-size: 90%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 50% 0%;
   mask-image: url(../img/menu/noun_blob_163427_@700.png);
   mask-size: 90%;
   mask-repeat: no-repeat;
@@ -831,7 +836,7 @@ footer .credit a {
   .hero .content p {
     font-size: 140%;
   }
-  
+
   .about .row {
     flex-wrap: wrap;
   }
