@@ -214,9 +214,10 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+  mask-image: linear-gradient(var(--opposite-bg-color) 80%, color-mix(in srgb, var(--bg-color) 0%, transparent));
 }
 
-.hero::after {
+/* .hero::after {
   content: '';
   display: block;
   position: absolute;
@@ -224,17 +225,22 @@ body {
   height: 25%;
   bottom: 0;
   background: linear-gradient(0deg, rgba(250, 246, 240, 1) 8%, rgba(255, 255, 255, 0) 60%);
-}
+} */
 
 .hero .content {
   padding: 1.4rem 7%;
-  max-width: 60rem;
+  /* max-width: 60rem; */
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 9rem;
 }
 
 .hero .content h1 {
   font-size: 5em;
   color: var(--opposite-bg-color);
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px var(--white-color),
+  0px 0px 5px var(--white-color);
   line-height: 1.2;
 }
 
@@ -246,8 +252,9 @@ body {
   font-size: 1.6rem;
   margin-top: 1.5rem;
   line-height: 1.4;
-  font-weight: 300;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  text-shadow: 1px 1px 2px var(--white-color), 
+  0px 0px 3px var(--white-color);
 }
 
 .hero .content .cta {
@@ -292,11 +299,15 @@ body {
 
 .about .row .about-img img {
   width: 95%;
+  mask-image: url(../img/menu/noun_blob_163427_@700.png);
+  mask-size: 90%;
+  mask-repeat: no-repeat;
+  mask-position: 50% 0%;
 }
 
 .about .row .content {
   flex: 1 1 40rem;
-  padding: 0 1rem;
+  padding: 1.5rem 1rem 0;
 }
 
 .about .row .content h3 {
@@ -747,6 +758,9 @@ footer .credit a {
   html {
     font-size: 80%;
   }
+  .hero .content h1 {
+    font-size: 480%;
+  }
   .menu-bundling .discount {
     right: 25rem;
     top: 6rem;
@@ -810,8 +824,12 @@ footer .credit a {
     right: 2rem;
   }
 
+  .hero .content h1 {
+    font-size: 400%;
+  }
+
   .hero .content p {
-    max-width: 420px;
+    font-size: 140%;
   }
   
   .about .row {
@@ -886,9 +904,6 @@ footer .credit a {
   }
   .about .row .content h3, .menu h3 {
     font-size: 1.5rem;
-  }
-  .hero .content p {
-    max-width: 250px;
   }
   .menu-bundling .discount {
     right: 7.5rem;
