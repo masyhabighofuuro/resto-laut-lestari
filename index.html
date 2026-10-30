@@ -15,6 +15,10 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- My Styles -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- AlpineJS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.xdist/cdn.min.js"></script>
+     <!-- App -->
+    <script src="src/app.js"></script>
   </head>
   <body>
     <!-- Navbar start -->
@@ -134,7 +138,7 @@
       <h2><span>Tentang</span> Kami</h2>
       <div class="row">
         <div class="about-img">
-          <img src="../img/tentang-kami.png" alt="Tentang Kami" />
+          <img src="img/tentang-kami.png" alt="Tentang Kami" />
         </div>
         <div class="content">
           <h3>Kenapa harus resto laut lestari?</h3>
@@ -363,7 +367,7 @@
     <!-- Menu Section end -->
 
     <!-- Menu-bundling Section start -->
-    <section class="menu-bundling" id="menu-bundling">
+    <section class="menu-bundling" id="menu-bundling" x-data="menu-bundling">
       <h2>Menu <span>Bundling</span></h2>
       <p class="discount"><span>10%</span> OFF!</p>
       <p>
@@ -371,171 +375,33 @@
         harga lebih hemat dengan pemesanan paket bundling.
       </p>
       <div class="row">
-        <div class="bundling-card">
-          <div class="bundling-icons">
-            <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#" class="item-detail-button1"><i data-feather="eye"></i></a>
-          </div>
-          <div class="bundling-image">
-            <img
-              src="img/bundling-image/paket-hemat-duo.webp"
-              alt="Paket Hemat Duo"
-            />
-          </div>
-          <div class="bundling-content">
-            <h3>Paket Hemat Duo</h3>
-            <div class="bundling-stars">
-              <i data-feather="star" class="starfull"></i>
-              <i data-feather="star" class="starfull"></i>
-              <i data-feather="star" class="starfull"></i>
-              <i data-feather="star" class="starfull"></i>
-              <i data-feather="star" class="starfull"></i>
+        <template x-for="(item, index) in items" x-key="index">
+          <div class="bundling-card">
+            <div class="bundling-icons">
+              <a href="#"><i data-feather="shopping-cart"></i></a>
+              <a href="#" class="item-detail-button1"><i data-feather="eye"></i></a>
             </div>
-            <div class="bundling-price">
-              Rp 57.000,- <span>Rp 63.000,-</span>
+            <div class="bundling-image">
+              <img
+                src="img/bundling-image/paket-hemat-duo.webp"
+                alt="Paket Hemat Duo"
+              />
             </div>
-          </div>
-        </div>
-        <div class="bundling-card">
-          <div class="bundling-icons">
-            <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#"><i data-feather="eye" class="item-detail-button2"></i></a>
-          </div>
-          <div class="bundling-image">
-            <img
-              src="img/bundling-image/paket-bakar-madu.webp"
-              alt="Paket Bakar Madu"
-            />
-          </div>
-          <div class="bundling-content">
-            <h3>Paket Bakar Madu</h3>
-            <div class="bundling-stars">
-              <i data-feather="star" class="starfull"></i>
-              <i data-feather="star" class="starfull"></i>
-              <i data-feather="star" class="starfull"></i>
-              <i data-feather="star" class="starfull"></i>
-              <span class="star-part star-8">
-                <i data-feather="star" class="starempty"></i>
-                <i data-feather="star" class="starpartial"></i>
-              </span>
-            </div>
-            <div class="bundling-price">
-              Rp 76.000,- <span>Rp 85.000,-</span>
+            <div class="bundling-content">
+              <h3>Paket Hemat Duo</h3>
+              <div class="bundling-stars">
+                <i data-feather="star" class="starfull"></i>
+                <i data-feather="star" class="starfull"></i>
+                <i data-feather="star" class="starfull"></i>
+                <i data-feather="star" class="starfull"></i>
+                <i data-feather="star" class="starfull"></i>
+              </div>
+              <div class="bundling-price">
+                Rp 57.000,- <span>Rp 63.000,-</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="bundling-card">
-          <div class="bundling-icons">
-            <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#"><i data-feather="eye" class="item-detail-button3"></i></a>
-          </div>
-          <div class="bundling-image">
-            <img
-              src="img/bundling-image/paket-pepes-nusantara.webp"
-              alt="Paket Pepes Nusantara"
-            />
-          </div>
-          <div class="bundling-content">
-            <h3>Paket Pepes Nusantara</h3>
-            <div class="bundling-stars">
-              <i data-feather="star" class="starfull"></i>
-              <i data-feather="star" class="starfull"></i>
-              <i data-feather="star" class="starfull"></i>
-              <i data-feather="star" class="starfull"></i>
-              <span class="star-part star-5">
-                <i data-feather="star" class="starempty"></i>
-                <i data-feather="star" class="starpartial"></i>
-              </span>
-            </div>
-            <div class="bundling-price">
-              Rp 69.000,- <span>Rp 77.000,-</span>
-            </div>
-          </div>
-        </div>
-        <div class="bundling-card">
-          <div class="bundling-icons">
-            <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#"><i data-feather="eye" class="item-detail-button4"></i></a>
-          </div>
-          <div class="bundling-image">
-            <img
-              src="img/bundling-image/paket-sop-ikan-hangat.webp"
-              alt="Paket Sop Ikan Hangat"
-            />
-          </div>
-          <div class="bundling-content">
-            <h3>Paket Sop Ikan Hangat</h3>
-            <div class="bundling-stars">
-              <i data-feather="star" class="starfull"></i>
-              <i data-feather="star" class="starfull"></i>
-              <i data-feather="star" class="starfull"></i>
-              <i data-feather="star" class="starfull"></i>
-              <span class="star-part star-6">
-                <i data-feather="star" class="starempty"></i>
-                <i data-feather="star" class="starpartial"></i>
-              </span>
-            </div>
-            <div class="bundling-price">
-              Rp 66.000,- <span>Rp 73.000,-</span>
-            </div>
-          </div>
-        </div>
-        <div class="bundling-card">
-          <div class="bundling-icons">
-            <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#"><i data-feather="eye" class="item-detail-button5"></i></a>
-          </div>
-          <div class="bundling-image">
-            <img
-              src="img/bundling-image/paket-goreng-sharing.webp"
-              alt="Paket Goreng Sharing"
-            />
-          </div>
-          <div class="bundling-content">
-            <h3>Paket Goreng Sharing</h3>
-            <div class="bundling-stars">
-              <i data-feather="star" class="starfull"></i>
-              <i data-feather="star" class="starfull"></i>
-              <i data-feather="star" class="starfull"></i>
-              <i data-feather="star" class="starfull"></i>
-              <span class="star-part star-4">
-                <i data-feather="star" class="starempty"></i>
-                <i data-feather="star" class="starpartial"></i>
-              </span>
-            </div>
-            <div class="bundling-price">
-              Rp 128.000,- <span>Rp 142.000,-</span>
-            </div>
-          </div>
-        </div>
-        <div class="bundling-card">
-          <div class="bundling-icons">
-            <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#"><i data-feather="eye" class="item-detail-button6"></i></a>
-          </div>
-          <div class="bundling-image">
-            <img
-              src="img/bundling-image/paket-premium-kepiting.webp"
-              alt="Paket Premium Kepiting"
-            />
-          </div>
-          <div class="bundling-content">
-            <h3>Paket Premium Kepiting</h3>
-            <div class="bundling-stars">
-              <i data-feather="star" class="starfull"></i>
-              <i data-feather="star" class="starfull"></i>
-              <i data-feather="star" class="starfull"></i>
-              <i data-feather="star" class="starfull"></i>
-              <span class="star-part star-7">
-                <i data-feather="star" class="starempty"></i>
-                <i data-feather="star" class="starpartial"></i>
-              </span>
-            </div>
-            <div class="bundling-price">
-              Rp 166.000,- <span>Rp 184.000,-</span>
-            </div>
-          </div>
-        </div>
+        </template>
       </div>
     </section>
     <!-- Menu-bundling Section end -->

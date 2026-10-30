@@ -36,122 +36,34 @@ document.addEventListener('click', function(e) {
     ShopCart.classList.remove('active');
   }
 });
-// Modal Box Item Detail (1)
-const itemDetailModal1 = document.querySelector('#item-detail-modal1');
-const itemDetailButton1 = document.querySelector('.item-detail-button1');
+// Modal Box Item Detail
+document.addEventListener('click', (e) => {
+  const target = e.target;
+  if (!(target instanceof Element)) return;
 
-itemDetailButton1.onclick = (e) => {
-  itemDetailModal1.style.display = 'flex';
-  e.preventDefault();
-};
+  const itemDetailButton = target.closest('.item-detail-button');
+  if (itemDetailButton) {
+    const modal = document.getElementById(
+      `item-detail-modal${itemDetailButton.dataset.modalId}`
+    );
+    if (!modal) {
+      console.error('Item detail modal was not found.');
+      return;
+    }
 
-itemDetailModal1.querySelector('.close-icon').onclick = (e) => {
-  itemDetailModal1.style.display = 'none';
-  e.preventDefault();
-};
-
-window.addEventListener('click', (e) => {
-  if (e.target === itemDetailModal1) {
-    itemDetailModal1.style.display = 'none';
+    modal.style.display = 'flex';
+    e.preventDefault();
+    return;
   }
-});
 
-// Modal Box Item Detail (2)
-const itemDetailModal2 = document.querySelector('#item-detail-modal2');
-const itemDetailButton2 = document.querySelector('.item-detail-button2').closest('a');
-
-itemDetailButton2.onclick = (e) => {
-  itemDetailModal2.style.display = 'flex';
-  e.preventDefault();
-};
-
-itemDetailModal2.querySelector('.close-icon').onclick = (e) => {
-  itemDetailModal2.style.display = 'none';
-  e.preventDefault();
-};
-
-window.addEventListener('click', (e) => {
-  if (e.target === itemDetailModal2) {
-    itemDetailModal2.style.display = 'none';
+  const closeButton = target.closest('.modal .close-icon');
+  if (closeButton) {
+    closeButton.closest('.modal').style.display = 'none';
+    e.preventDefault();
+    return;
   }
-});
 
-// Modal Box Item Detail (3)
-const itemDetailModal3 = document.querySelector('#item-detail-modal3');
-const itemDetailButton3 = document.querySelector('.item-detail-button3').closest('a');
-
-itemDetailButton3.onclick = (e) => {
-  itemDetailModal3.style.display = 'flex';
-  e.preventDefault();
-};
-
-itemDetailModal3.querySelector('.close-icon').onclick = (e) => {
-  itemDetailModal3.style.display = 'none';
-  e.preventDefault();
-};
-
-window.addEventListener('click', (e) => {
-  if (e.target === itemDetailModal3) {
-    itemDetailModal3.style.display = 'none';
-  }
-});
-
-// Modal Box Item Detail (4)
-const itemDetailModal4 = document.querySelector('#item-detail-modal4');
-const itemDetailButton4 = document.querySelector('.item-detail-button4').closest('a');
-
-itemDetailButton4.onclick = (e) => {
-  itemDetailModal4.style.display = 'flex';
-  e.preventDefault();
-};
-
-itemDetailModal4.querySelector('.close-icon').onclick = (e) => {
-  itemDetailModal4.style.display = 'none';
-  e.preventDefault();
-};
-
-window.addEventListener('click', (e) => {
-  if (e.target === itemDetailModal4) {
-    itemDetailModal4.style.display = 'none';
-  }
-});
-
-// Modal Box Item Detail (5)
-const itemDetailModal5 = document.querySelector('#item-detail-modal5');
-const itemDetailButton5 = document.querySelector('.item-detail-button5').closest('a');
-
-itemDetailButton5.onclick = (e) => {
-  itemDetailModal5.style.display = 'flex';
-  e.preventDefault();
-};
-
-itemDetailModal5.querySelector('.close-icon').onclick = (e) => {
-  itemDetailModal5.style.display = 'none';
-  e.preventDefault();
-};
-
-window.addEventListener('click', (e) => {
-  if (e.target === itemDetailModal5) {
-    itemDetailModal5.style.display = 'none';
-  }
-});
-
-// Modal Box Item Detail (6)
-const itemDetailModal6 = document.querySelector('#item-detail-modal6');
-const itemDetailButton6 = document.querySelector('.item-detail-button6').closest('a');
-
-itemDetailButton6.onclick = (e) => {
-  itemDetailModal6.style.display = 'flex';
-  e.preventDefault();
-};
-
-itemDetailModal6.querySelector('.close-icon').onclick = (e) => {
-  itemDetailModal6.style.display = 'none';
-  e.preventDefault();
-};
-
-window.addEventListener('click', (e) => {
-  if (e.target === itemDetailModal6) {
-    itemDetailModal6.style.display = 'none';
+  if (target.classList.contains('modal')) {
+    target.style.display = 'none';
   }
 });

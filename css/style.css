@@ -522,7 +522,7 @@ body {
   font-weight: bold;
 }
 
-.bundling-price span {
+.bundling-price span:not(.current-price) {
   text-decoration: line-through;
   font-weight: lighter;
   font-size: 1rem;
