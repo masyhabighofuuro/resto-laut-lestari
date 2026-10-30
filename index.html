@@ -16,8 +16,11 @@
     <!-- My Styles -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- AlpineJS -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.xdist/cdn.min.js"></script>
-     <!-- App -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.12/dist/cdn.min.js"
+    ></script>
+    <!-- App -->
     <script src="src/app.js"></script>
   </head>
   <body>
@@ -367,37 +370,41 @@
     <!-- Menu Section end -->
 
     <!-- Menu-bundling Section start -->
-    <section class="menu-bundling" id="menu-bundling" x-data="menu-bundling">
+    <section class="menu-bundling" id="menu-bundling" x-data="menuBundling">
       <h2>Menu <span>Bundling</span></h2>
       <p class="discount"><span>10%</span> OFF!</p>
       <p>
         Nikmati paket bundling hidangan laut favorit, porsi pas untuk berbagi,
         harga lebih hemat dengan pemesanan paket bundling.
       </p>
-      <div class="row">
-        <template x-for="(item, index) in items" x-key="index">
+      <div class="row" x-effect="items; $nextTick(() => feather.replace())">
+        <template x-for="item in items" :key="item.id">
           <div class="bundling-card">
             <div class="bundling-icons">
               <a href="#"><i data-feather="shopping-cart"></i></a>
-              <a href="#" class="item-detail-button1"><i data-feather="eye"></i></a>
+              <a href="#" class="item-detail-button" :data-modal-id="item.id"
+                ><i data-feather="eye"></i
+              ></a>
             </div>
             <div class="bundling-image">
-              <img
-                src="img/bundling-image/paket-hemat-duo.webp"
-                alt="Paket Hemat Duo"
-              />
+              <img :src="'img/bundling-image/' + item.img" :alt="item.name" />
             </div>
             <div class="bundling-content">
-              <h3>Paket Hemat Duo</h3>
+              <h3 x-text="item.name"></h3>
               <div class="bundling-stars">
-                <i data-feather="star" class="starfull"></i>
-                <i data-feather="star" class="starfull"></i>
-                <i data-feather="star" class="starfull"></i>
-                <i data-feather="star" class="starfull"></i>
-                <i data-feather="star" class="starfull"></i>
+                <template x-for="n in item.fullStars" :key="n">
+                  <i data-feather="star" class="starfull"></i>
+                </template>
+                <template x-if="item.partialStar">
+                  <span class="star-part" :class="item.partialStar">
+                    <i data-feather="star" class="starempty"></i>
+                    <i data-feather="star" class="starpartial"></i>
+                  </span>
+                </template>
               </div>
               <div class="bundling-price">
-                Rp 57.000,- <span>Rp 63.000,-</span>
+                <span x-text="formatPrice(item.price)"></span>
+                <span x-text="formatPrice(item.originalPrice)"></span>
               </div>
             </div>
           </div>
@@ -467,7 +474,14 @@
           />
           <div class="bundling-content">
             <h3>Paket Hemat Duo</h3>
-            <p>Paket Hemat Duo cocok untuk menikmati sajian laut bersama pasangan atau sahabat. Porsinya pas untuk makan siang santai, makan malam, maupun akhir pekan. Perpaduan rasa gurih dan harga bundling yang hemat menjadikannya pilihan praktis. Sajikan selagi hangat untuk melengkapi momen makan berdua yang sederhana, nyaman, dan berkesan.</p>
+            <p>
+              Paket Hemat Duo cocok untuk menikmati sajian laut bersama pasangan
+              atau sahabat. Porsinya pas untuk makan siang santai, makan malam,
+              maupun akhir pekan. Perpaduan rasa gurih dan harga bundling yang
+              hemat menjadikannya pilihan praktis. Sajikan selagi hangat untuk
+              melengkapi momen makan berdua yang sederhana, nyaman, dan
+              berkesan.
+            </p>
             <div class="bundling-stars">
               <i data-feather="star" class="starfull"></i>
               <i data-feather="star" class="starfull"></i>
@@ -498,7 +512,14 @@
           />
           <div class="bundling-content">
             <h3>Paket Bakar Madu</h3>
-            <p>Paket Bakar Madu menghadirkan sajian laut dengan perpaduan rasa manis gurih serta aroma bakaran menggoda. Nikmati bersama nasi hangat untuk santapan yang lebih memuaskan. Cocok disajikan saat berkumpul dengan keluarga atau teman, maupun untuk merayakan momen spesial. Pilihan bundling ini praktis bagi pencinta hidangan bakar yang lezat.</p>
+            <p>
+              Paket Bakar Madu menghadirkan sajian laut dengan perpaduan rasa
+              manis gurih serta aroma bakaran menggoda. Nikmati bersama nasi
+              hangat untuk santapan yang lebih memuaskan. Cocok disajikan saat
+              berkumpul dengan keluarga atau teman, maupun untuk merayakan momen
+              spesial. Pilihan bundling ini praktis bagi pencinta hidangan bakar
+              yang lezat.
+            </p>
             <div class="bundling-stars">
               <i data-feather="star" class="starfull"></i>
               <i data-feather="star" class="starfull"></i>
@@ -529,7 +550,14 @@
           />
           <div class="bundling-content">
             <h3>Paket Pepes Nusantara</h3>
-            <p>Paket Pepes Nusantara mengangkat cita rasa rempah khas masakan tradisional Indonesia. Pepes beraroma harum ini menghadirkan suasana rumahan yang hangat di meja makan. Nikmati bersama nasi hangat saat makan siang atau malam. Paket bundling ini cocok untuk berbagi hidangan bersama keluarga dan sahabat dalam suasana santai dan akrab.</p>
+            <p>
+              Paket Pepes Nusantara mengangkat cita rasa rempah khas masakan
+              tradisional Indonesia. Pepes beraroma harum ini menghadirkan
+              suasana rumahan yang hangat di meja makan. Nikmati bersama nasi
+              hangat saat makan siang atau malam. Paket bundling ini cocok untuk
+              berbagi hidangan bersama keluarga dan sahabat dalam suasana santai
+              dan akrab.
+            </p>
             <div class="bundling-stars">
               <i data-feather="star" class="starfull"></i>
               <i data-feather="star" class="starfull"></i>
@@ -560,7 +588,14 @@
           />
           <div class="bundling-content">
             <h3>Paket Sop Ikan Hangat</h3>
-            <p>Paket Sop Ikan Hangat menawarkan sajian berkuah dengan aroma lembut dan rasa gurih menyegarkan. Nikmati ikan dan kuahnya selagi hangat untuk santapan yang nyaman, terutama saat berkumpul bersama keluarga. Praktis untuk makan siang atau malam, paket ini melengkapi meja makan dengan hidangan sederhana yang terasa akrab dan menenangkan.</p>
+            <p>
+              Paket Sop Ikan Hangat menawarkan sajian berkuah dengan aroma
+              lembut dan rasa gurih menyegarkan. Nikmati ikan dan kuahnya selagi
+              hangat untuk santapan yang nyaman, terutama saat berkumpul bersama
+              keluarga. Praktis untuk makan siang atau malam, paket ini
+              melengkapi meja makan dengan hidangan sederhana yang terasa akrab
+              dan menenangkan.
+            </p>
             <div class="bundling-stars">
               <i data-feather="star" class="starfull"></i>
               <i data-feather="star" class="starfull"></i>
@@ -591,7 +626,14 @@
           />
           <div class="bundling-content">
             <h3>Paket Goreng Sharing</h3>
-            <p>Paket Goreng Sharing menghadirkan sajian laut goreng dengan tekstur renyah dan rasa gurih yang menggugah selera. Porsinya cocok untuk berbagi, sehingga semua dapat mencicipi hidangan sambil bertukar cerita. Pas untuk makan bersama keluarga atau teman, terutama saat akhir pekan. Nikmati selagi hangat agar kerenyahannya tetap terasa.</p>
+            <p>
+              Paket Goreng Sharing menghadirkan sajian laut goreng dengan
+              tekstur renyah dan rasa gurih yang menggugah selera. Porsinya
+              cocok untuk berbagi, sehingga semua dapat mencicipi hidangan
+              sambil bertukar cerita. Pas untuk makan bersama keluarga atau
+              teman, terutama saat akhir pekan. Nikmati selagi hangat agar
+              kerenyahannya tetap terasa.
+            </p>
             <div class="bundling-stars">
               <i data-feather="star" class="starfull"></i>
               <i data-feather="star" class="starfull"></i>
@@ -622,7 +664,14 @@
           />
           <div class="bundling-content">
             <h3>Paket Premium Kepiting</h3>
-            <p>Paket Premium Kepiting menjadikan kepiting sebagai sajian utama untuk pengalaman bersantap istimewa. Cocok bagi pencinta hidangan laut yang ingin merayakan momen spesial bersama keluarga, pasangan, atau sahabat. Sajikan di tengah meja agar semua dapat berbagi. Paket ini pas untuk jamuan akhir pekan atau perayaan kecil, serta nikmat disantap bersama hidangan pendamping favorit.</p>
+            <p>
+              Paket Premium Kepiting menjadikan kepiting sebagai sajian utama
+              untuk pengalaman bersantap istimewa. Cocok bagi pencinta hidangan
+              laut yang ingin merayakan momen spesial bersama keluarga,
+              pasangan, atau sahabat. Sajikan di tengah meja agar semua dapat
+              berbagi. Paket ini pas untuk jamuan akhir pekan atau perayaan
+              kecil, serta nikmat disantap bersama hidangan pendamping favorit.
+            </p>
             <div class="bundling-stars">
               <i data-feather="star" class="starfull"></i>
               <i data-feather="star" class="starfull"></i>

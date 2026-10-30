@@ -1,5 +1,5 @@
 document.addEventListener("alpine:init", () => {
-  Alpine.data("menu-bundling", () => ({
+  Alpine.data("menuBundling", () => ({
     items: [
       {
         id: 1,
