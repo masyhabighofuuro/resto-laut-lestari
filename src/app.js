@@ -1,3 +1,6 @@
+const formatPrice = (price) =>
+  `Rp ${new Intl.NumberFormat("id-ID").format(price)},-`;
+
 document.addEventListener("alpine:init", () => {
   Alpine.data("menuBundling", () => ({
     items: [
@@ -57,7 +60,66 @@ document.addEventListener("alpine:init", () => {
       },
     ],
     formatPrice(price) {
-      return `Rp ${new Intl.NumberFormat("id-ID").format(price)},-`;
+      return formatPrice(price);
     },
   }));
+
+  Alpine.store("cart", {
+    items: [],
+    totalHarga: 0,
+    qty: 0,
+    formatPrice(price) {
+      return formatPrice(price);
+    },
+    add(newItem) {
+      // cek apakah ada barang yang sama pada cart
+      const cartItem = this.items.find((item) => item.id === newItem.id);
+      // kalau belum ada / cart masih kosong
+      if (!cartItem) {
+        this.items.push({
+          ...newItem,
+          qty: 1,
+          totalHarga: newItem.price,
+        });
+        this.qty++;
+        this.totalHarga += newItem.price;
+      } else {
+        // jika barang sudah ada, cek apakah barang sama atau beda dengan ada yang di cart
+        this.items = this.items.map((item) => {
+          // jika barang berbeda
+          if (item.id != newItem.id) {
+            return item;
+          } else {
+            // jika barang sama /sudah ada, tambah qty dan totalnya
+            item.qty++;
+            item.totalHarga = item.price * item.qty;
+            this.qty++;
+            this.totalHarga += item.price;
+            return item;
+          }
+        });
+      }
+    },
+    remove(id) {
+      // Cari item berdasarkan ID; jika tidak ada, keranjang tidak perlu diubah.
+      const cartItem = this.items.find((item) => item.id === id);
+      if (!cartItem) {
+        return;
+      }
+
+      // Kurangi jumlah dan total harga setiap kali satu item dihapus.
+      this.qty--;
+      this.totalHarga -= cartItem.price;
+
+      // Hapus item dari daftar jika jumlahnya tinggal satu.
+      if (cartItem.qty === 1) {
+        this.items = this.items.filter((item) => item.id !== id);
+        return;
+      }
+
+      // Jika jumlahnya lebih dari satu, perbarui jumlah dan subtotal item.
+      cartItem.qty--;
+      cartItem.totalHarga = cartItem.price * cartItem.qty;
+    },
+  });
 });
